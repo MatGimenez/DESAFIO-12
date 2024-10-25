@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <div style="display: flex; flex-direction:column; text-align:center;">
+        <h1>Ejercicio 3</h1>
+        <h3 style="margin: 0">Ingresa el Password correctos</h3>
+        <h4 style="margin:5px; color:crimson">Nota: hay dos claves correctas </>
+    </div>
+    <div style="display: flex; justify-content:center;align-content:center;margin-top:8rem;">
+        <select name="sel1" id="s-1" style="width: 50px; height:50px;">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+        <select name="sel2" id="s-2" style="width: 50px; height:50px;">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+        <select name="sel3" id="s-3" style="width: 50px; height:50px;">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+    </div>
+    <div style="display: flex; justify-content:center; margin:2rem; gap:20px">
+        <button onclick="
+        selector1 = document.querySelector('#s-1').value
+        selector2 = document.querySelector('#s-2').value
+        selector3 = document.querySelector('#s-3').value
+        s_1 = Number(selector1)
+        s_2 = Number(selector2)
+        s_3 = Number(selector3)
+        parrafo = document.querySelector('p')
+        
+        
+        if (s_1 == 9 && s_2 == 1  && s_3 == 1){
+            parrafo.innerHTML = 'Password 1 correcto'
+        }else if(s_1 == 7 && s_2 == 1  && s_3 == 4){
+            parrafo.innerHTML = 'Password 2 correcto'
+        }else{
+            parrafo.innerHTML = 'Password incorrecto'
+        }
+
+        ">Chequear</button>
+        <p></p>
+    </div>
+</body>
+</html>

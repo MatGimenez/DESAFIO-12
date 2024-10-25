@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <h1 style="display: flex; justify-content:center;">Ejercicio 2</h1>
+    <div style="display: flex; width:100; justify-content:center; gap:10px;">
+        <div class="container" style="display: flex; flex-direction:column; gap: 10px">
+            <img id="imagen" src="https://picsum.photos/200/?random=1" alt="foto_aleatoria">
+            <input id="i-1" type="text">
+        </div>
+        <div class="container" style="display: flex; flex-direction:column; gap:10px">
+            <img id="imagen" src="https://picsum.photos/200/?random=2" alt="foto_aleatoria">
+            <input id="i-2" type="text">
+        </div>
+        <div class="container" style="display: flex; flex-direction:column; gap:10px">
+            <img id="imagen" src="https://picsum.photos/200/?random=3" alt="foto_aleatoria">
+            <input type="text" id="i-3">
+        </div>
+
+    </div> 
+    <div style="display: flex; justify-content:center; margin:2rem; gap:20px">
+        <button onclick="
+            valor1 = document.querySelector('#i-1').value
+            valor2 = document.querySelector('#i-2').value
+            valor3 = document.querySelector('#i-3').value
+            detalle = document.querySelector('p')
+            suma = Number(valor1) + Number(valor2) + Number(valor3)
+
+            if (suma <= 10 && suma == 1){
+                detalle.innerHTML = 'Llevas ' + suma + ' ticket'
+            }else if(suma <= 10){
+                detalle.innerHTML = 'Llevas ' + suma + ' tickets'
+            }else{
+                detalle.innerHTML = 'Llevas demasiados tickets'
+            }
+        
+        ">Chequear</button>
+        <p></p>
+    </div>
+</body>
+</html>
